@@ -5,7 +5,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Movies</title>
-      <link rel="stylesheet" href="styles/style.css" />
+      <link rel="stylesheet" href="src/css/style.css" />
    </head>
    <body>
       <header>
@@ -16,14 +16,10 @@
       </header>
       <div class="container">
          <h1 id="title"></h1>
-         <div id="loading" class="loading">
-            <div id="loading__message"></div>
-            <div id="loading__spinner" class="spinner"></div>
-         </div>
          <main id="movies"></main>
       </div>
 
       <script src="./node_modules/axios/dist/axios.min.js"></script>
-      <script type="module" src="scripts/movie-app.js"></script>
+      <script type="module" src="src/js/main.js"></script>
    </body>
 </html>

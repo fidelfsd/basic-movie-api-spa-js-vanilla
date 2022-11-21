@@ -1,0 +1,32 @@
+.header-container,
+.container {
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+.container {
+    padding-top: 3em;
+    padding-bottom: 5em;
+}
+
+header {
+    background-color: var(--secondary-color);
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.navigation {
+    padding: 0.5em 0.5em;
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+}
+
+.navigation:hover {
+    color: var(--primary-color);
+}
+
+.navigation:not(:last-child) {
+    margin-right: 1em;
+}

@@ -1,5 +1,5 @@
-import { global } from "./global.js";
-import { MovieRender } from "./movie-render.js";
+import { global } from "../global.js";
+import { MovieRender } from "../movie-render.js";
 import { LoadingService } from "./loading-service.js";
 
 export class MovieService {
@@ -8,7 +8,9 @@ export class MovieService {
    #ui;
    constructor() {
       this.#movieRender = new MovieRender();
-      this.#loadingCtrl = new LoadingService();
+      this.#loadingCtrl = new LoadingService({
+         spinner: "spinner-comet",
+      });
    }
 
    async getPopularMovies() {

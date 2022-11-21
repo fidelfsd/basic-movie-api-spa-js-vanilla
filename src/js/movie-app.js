@@ -1,6 +1,6 @@
-import { MovieService } from "./movie-service.js";
+import { MovieService } from "./services/movie-service.js";
 
-class MovieApp {
+export class MovieApp {
    #movieServie;
    #ui;
    constructor() {
@@ -26,5 +26,3 @@ class MovieApp {
       });
    }
 }
-
-new MovieApp();
