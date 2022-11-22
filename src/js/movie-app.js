@@ -1,13 +1,13 @@
-import { MovieService } from "./services/movie-service.js";
+import { PopularMovies } from "../pages/popular-movies/popular-movies.js";
 
 export class MovieApp {
-   #movieServie;
+   #popularMovies;
    #ui;
    constructor() {
-      this.#movieServie = new MovieService();
-      this.#movieServie.getPopularMovies();
+      this.#popularMovies = new PopularMovies();
       this.getUIBaseObjects();
       this.addUIEvents();
+      this.#popularMovies.getPopularMovies();
    }
 
    getUIBaseObjects() {
@@ -18,11 +18,11 @@ export class MovieApp {
 
    addUIEvents() {
       this.#ui.popular.addEventListener("click", () => {
-         this.#movieServie.getPopularMovies();
+         this.#popularMovies.getPopularMovies();
       });
 
       this.#ui.upcoming.addEventListener("click", () => {
-         this.#movieServie.getUpcomingMovies();
+         //
       });
    }
 }

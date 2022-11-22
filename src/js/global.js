@@ -1,9 +1,15 @@
 export const global = {
-  apiKey: "c0bb10b9543a8ca0ad865a5b2cc44449",
-  baseUrl: "https://api.themoviedb.org/3",
-  images: "https://image.tmdb.org/t/p",
+   apiKey: "c0bb10b9543a8ca0ad865a5b2cc44449",
+   baseUrl: "https://api.themoviedb.org/3",
+   images: "https://image.tmdb.org/t/p",
 };
 
+export const SPINNER = {
+   defaul: "spinner",
+   material: "spinner-material",
+   comet: "spinner-comet",
+   scallingDotRing: "spinner-scalling-dot-ring",
+};
 /*
 ## Add Supported Image Sizes
                                  Min Res      Max Res
