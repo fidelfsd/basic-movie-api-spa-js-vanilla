@@ -8,7 +8,6 @@ export const SPINNER = {
    defaul: "spinner",
    material: "spinner-material",
    comet: "spinner-comet",
-   scallingDotRing: "spinner-scalling-dot-ring",
 };
 /*
 ## Add Supported Image Sizes

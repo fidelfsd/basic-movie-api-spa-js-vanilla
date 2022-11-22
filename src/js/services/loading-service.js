@@ -6,13 +6,7 @@ export class LoadingController {
    #id;
    #ui;
    constructor({ message = "Loading...", spinner = SPINNER.defaul } = {}) {
-      if (
-         ![SPINNER.defaul, SPINNER.material, SPINNER.comet].includes(spinner)
-      ) {
-         this.#spinner = SPINNER.defaul;
-      } else {
-         this.#spinner = spinner;
-      }
+      this.#spinner = spinner;
       this.#message = message;
       this.#id = "loading";
       this.#ui = {};

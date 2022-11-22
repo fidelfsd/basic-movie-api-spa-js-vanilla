@@ -13,10 +13,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    min-height: 80px;
 }
 
 #loading__message {
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 
 #loading__spinner {
@@ -111,29 +112,6 @@
 
 @keyframes spinner-zp9dbg {
     to {
-        transform: rotate(1turn);
-    }
-}
-
-// scalling-dot-ring
-.spinner-scalling-dot-ring {
-    --d: 24.6px;
-    width: 4.5px;
-    height: 4.5px;
-    border-radius: 50%;
-    color: var(--primary-color);
-    box-shadow: calc(1*var(--d)) calc(0*var(--d)) 0 0,
-        calc(0.707*var(--d)) calc(0.707*var(--d)) 0 1.1px,
-        calc(0*var(--d)) calc(1*var(--d)) 0 2.2px,
-        calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3.4px,
-        calc(-1*var(--d)) calc(0*var(--d)) 0 4.5px,
-        calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5.6px,
-        calc(0*var(--d)) calc(-1*var(--d)) 0 6.7px;
-    animation: spinner-a90wxe 1s infinite steps(8);
-}
-
-@keyframes spinner-a90wxe {
-    100% {
         transform: rotate(1turn);
     }
 }

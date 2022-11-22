@@ -22,14 +22,18 @@ export class PopularMovies {
       // loading
       this.#loadingCtrl.present();
 
-      setTimeout(async () => {
-         let data = await this.#movieService.getPopularMovies();
-         data = await data.json();
+      await this.sleep(2000); // add delay
 
-         const movies = data.results;
+      try {
+         let res = await this.#movieService.getPopularMovies();
+         const movies = res.data.results;
          this.renderPopularMovies(movies);
-         this.#loadingCtrl.dismiss();
-      }, 2000);
+      } catch (error) {
+         console.log(error);
+      }
+
+      // dismiss loading
+      this.#loadingCtrl.dismiss();
    }
 
    renderPopularMovies(movies) {
@@ -49,5 +53,9 @@ export class PopularMovies {
 
       // render html
       this.#ui.moviesRoot.innerHTML = moviesStr;
+   }
+
+   sleep(ms) {
+      return new Promise((r) => setTimeout(r, ms));
    }
 }

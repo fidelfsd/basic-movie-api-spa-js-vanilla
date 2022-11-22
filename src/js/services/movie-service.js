@@ -5,7 +5,7 @@ export class MovieService {
 
    getPopularMovies(page = 1) {
       const apiUrl = `${global.baseUrl}/movie/popular?api_key=${global.apiKey}&page=${page}`;
-      return fetch(apiUrl);
+      return axios.get(apiUrl);
    }
 
    getUpcomingMovies() {
