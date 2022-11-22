@@ -22,12 +22,12 @@ export class PopularMovies {
       // loading
       this.#loadingCtrl.present();
 
-      await this.sleep(2000); // add delay
+      await this.#sleep(2000); // add delay
 
       try {
          let res = await this.#movieService.getPopularMovies();
          const movies = res.data.results;
-         this.renderPopularMovies(movies);
+         this.#renderMovies(movies);
       } catch (error) {
          console.log(error);
       }
@@ -36,7 +36,7 @@ export class PopularMovies {
       this.#loadingCtrl.dismiss();
    }
 
-   renderPopularMovies(movies) {
+   #renderMovies(movies) {
       let moviesStr = "";
 
       moviesStr += `
@@ -55,7 +55,7 @@ export class PopularMovies {
       this.#ui.moviesRoot.innerHTML = moviesStr;
    }
 
-   sleep(ms) {
+   #sleep(ms) {
       return new Promise((r) => setTimeout(r, ms));
    }
 }

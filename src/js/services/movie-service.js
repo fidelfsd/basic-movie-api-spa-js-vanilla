@@ -8,13 +8,13 @@ export class MovieService {
       return axios.get(apiUrl);
    }
 
-   getUpcomingMovies() {
+   getUpcomingMovies(page = 1) {
       const apiUrl = `${global.baseUrl}/movie/upcoming?api_key=${global.apiKey}&page=${page}`;
-      return fetch(apiUrl);
+      return axios.get(apiUrl);
    }
 
    getMovieDetail(movieId) {
-      const apiUrl = `${global.baseUrl}/movie/${movieId}?api_key=${global.apiKey}&page=${page}`;
+      const apiUrl = `${global.baseUrl}/movie/${movieId}?api_key=${global.apiKey}`;
       return axios.get(apiUrl);
    }
 }
